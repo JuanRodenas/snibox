@@ -1,0 +1,15 @@
+---
+version: '3'
+services:
+  snibox:
+    container_name: snibox
+    volumes:
+        - '/patch/to/data/app/db:/app/db/database'
+    ports:
+        - '3000:3000'
+    restart: always
+    image: juanico/snibox:latest
+    env_file:
+        - .env
+    security_opt:
+        - no-new-privileges:true
