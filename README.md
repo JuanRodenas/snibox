@@ -15,16 +15,17 @@ docker build -t snibox .
 
 * Docker compose:
 ```bash
+---
 version: '3'
 services:
     snibox:
         container_name: snibox
         volumes:
-            - '/home/user/snibox/app/db:/app/db/database'
+            - './data/app/db:/app/db/database'
         ports:
             - '3000:3000'
         restart: always
-        image: melashri/snibox
+        image: juanico/snibox:latest
 ```
 El contenedor ejecuta `rake db:migrate` en cada inicio, para crear el archivo de la base de datos si no existe, o actualizar el esquema de la base de datos si es necesario, por lo que las copias de seguridad son muy recomendables.
 
