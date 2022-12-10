@@ -14,20 +14,22 @@ services:
     depends_on:
       - backend
     ports:
-        - '443:443'
+      - '443:443'
   
   backend:
     container_name: snibox-backend
     image: juanico/snibox:latest
     volumes:
-        - '/patch/to/data/data/app/db:/app/db/database'
+      - '/patch/to/data/data/app/db:/app/db/database'
     restart: unless-stopped
     env_file:
-        - .env
+      - .env
     depends_on:
       - backend-cache
     security_opt:
       - no-new-privileges:true
+    command:
+      - "--quiet"
  
   backend-cache:
     image: redis:alpine
