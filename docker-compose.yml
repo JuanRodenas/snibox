@@ -10,11 +10,10 @@ services:
       - '/patch/to/data/nginx:/etc/nginx'
       - '/etc/localtime:/etc/localtime:ro'
       - '/etc/timezone:/etc/timezone:ro'
-      - '/patch/to/data/certs:/etc/nginx/certs'
     depends_on:
       - backend
     ports:
-      - '443:443'
+      - '80:80'
   
   backend:
     container_name: snibox-backend
