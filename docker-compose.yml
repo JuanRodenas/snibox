@@ -4,19 +4,21 @@ services:
   nginx-puma:
     container_name: snibox-nginx
     image: juanico/nginx-puma:snibox
-    init: true
     restart: unless-stopped
     volumes:
-      - '/patch/to/data/static-files:/var/www/html'
+      - '/patch/to/data/data:/var/www/html'
+      - '/patch/to/data/nginx:/etc/nginx'
+      - '/etc/localtime:/etc/localtime:ro'
+      - '/etc/timezone:/etc/timezone:ro'
+      - '/patch/to/data/certs:/etc/nginx/certs'
     depends_on:
       - backend
     ports:
-        - '80:80'
-
+        - '443:443'
+  
   backend:
     container_name: snibox-backend
     image: juanico/snibox:latest
-    init: true
     volumes:
         - '/patch/to/data/data/app/db:/app/db/database'
     restart: unless-stopped
@@ -24,7 +26,9 @@ services:
         - .env
     depends_on:
       - backend-cache
-
+    security_opt:
+      - no-new-privileges:true
+ 
   backend-cache:
     image: redis:alpine
     container_name: snibox-redis
