@@ -5,6 +5,7 @@ Gestor de fragmentos de código auto-alojado. Desarrollado para recoger y organi
 ![Docker Pulls](https://img.shields.io/docker/pulls/juanico/snibox?logo=docker&style=for-the-badge)
 ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/juanico/snibox?logo=docker&style=for-the-badge)
 [![GitHub Release](https://img.shields.io/github/release/JuanRodenas/snibox.svg?color=blue&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/JuanRodenas/snibox/releases)
+[![Docker build](https://img.shields.io/docker/automated/juanico/snibox.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/juanico/snibox/)
 
 ## Construir
 Para construir esta imagen utilice el siguiente comando:
