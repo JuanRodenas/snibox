@@ -9,13 +9,13 @@ Gestor de fragmentos de código auto-alojado. Desarrollado para recoger y organi
 Para construir esta imagen utilice el siguiente comando:
 
 ```bash
-git clone https://github.com/JuanRodenas/snibox.git
+wget https://github.com/JuanRodenas/snibox/releases/download/snibox/snibox-source-code.zip
 docker build -t snibox .
 ```
 
 ## Usage
 * Realiza un pull con la imagen: 
-`docker pull melashri/snibox:latest`
+`docker pull juanico/snibox:stable`
 
 * Docker compose:
 ```bash
@@ -29,7 +29,7 @@ services:
     ports:
         - '3000:3000'
     restart: always
-    image: juanico/snibox:latest
+    image: juanico/snibox:stable
     env_file:
         - .env
     security_opt:
