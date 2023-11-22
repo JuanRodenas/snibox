@@ -8,11 +8,10 @@ Gestor de fragmentos de código auto-alojado. Desarrollado para recoger y organi
 ## arquitecturas
 Las arquitecturas soportadas por esta imagen son:
 
-| PROYECTO | TAGNAME  | COMMENT |
-| :-- | :--: | :-- |
-| estable | :stable | Version stable |
-| arm | :arm | Version armv8 |
----
+| Architecture | Available | Tag |
+| :----: | :----: | ---- |
+| x86-64 | ✅ | :stable |
+| arm | ✅ | :arm |
 
 ## Usage
 * Realiza un pull con la imagen: 
