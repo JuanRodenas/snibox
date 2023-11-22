@@ -6,12 +6,13 @@ Gestor de fragmentos de código auto-alojado. Desarrollado para recoger y organi
 ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/juanico/snibox?logo=docker&style=for-the-badge)
 
 ## Construir
-Para construir esta imagen utilice el siguiente comando:
+Las arquitecturas soportadas por esta imagen son:
 
-```bash
-wget https://github.com/JuanRodenas/snibox/releases/download/snibox/snibox-source-code.zip
-docker build -t snibox .
-```
+| PROYECTO | TAGNAME  | COMMENT |
+| :-- | :--: | :-- |
+| estable | :stable | Version stable |
+| arm | :arm | Version armv8 |
+---
 
 ## Usage
 * Realiza un pull con la imagen: 
