@@ -11,7 +11,6 @@ Las arquitecturas soportadas por esta imagen son:
 | Architecture | Available | Tag |
 | :----: | :----: | ---- |
 | x86-64 | ✅ | :stable |
-| arm | ✅ | :arm |
 
 ## Usage
 * Realiza un pull con la imagen: 
